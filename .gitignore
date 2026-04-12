@@ -28,5 +28,7 @@ __pycache__/
 # Reports
 docs/pit-reports/
 docs/major-results/
+analytics/run*
+src/
 
 .PVS-Studio/

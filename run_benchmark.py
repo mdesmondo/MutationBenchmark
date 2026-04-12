@@ -48,7 +48,8 @@ def extract_package_name(file_path):
     except Exception: pass
     return ""
 
-def inject_module_to_src(raw_module_path):
+# Добавили второй аргумент helper_path (по умолчанию None)
+def inject_module_to_src(raw_module_path, helper_path=None):
     """Очищает код, подтягивает общие файлы и записывает всё в src"""
     if TEMPLATE_SRC_DIR.exists(): shutil.rmtree(TEMPLATE_SRC_DIR)
     if DOCS_DIR.exists(): shutil.rmtree(DOCS_DIR)
@@ -56,10 +57,13 @@ def inject_module_to_src(raw_module_path):
     java_files = list(raw_module_path.rglob("*.java"))
     if not java_files: return False
 
-    # подтягиваем общие файлы-помощники (костыли) - опционально для QuixBugs
-    common_dir = Path("/Users/mihailkarpenko/Desktop/pool/common_helper")
-    if common_dir.exists():
-        java_files.extend(list(common_dir.rglob("*.java")))
+    # Вся логика должна быть ВНУТРИ проверки на наличие helper_path
+    if helper_path:
+        common_dir = Path(helper_path)
+        if common_dir.exists():
+            java_files.extend(list(common_dir.rglob("*.java")))
+        else:
+            print(f"  ⚠️ Внимание: Папка с хелперами {helper_path} не найдена.")
 
     package_name = "org.example"
     package_path = "org/example"
@@ -331,6 +335,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--path", required=True, help="Путь к папке (с модулями ИЛИ с .java файлами)")
     parser.add_argument("--iterations", type=int, default=3, help="Кол-во итераций (среднее)")
+    parser.add_argument("--helper", default=None, help="Опциональный путь к директории с файлами-помощниками")
     args = parser.parse_args()
 
     target_dir = Path(args.path)
@@ -368,7 +373,8 @@ def main():
         loc_count = count_loc(mod_path)
         print(f"  📊 Объём кода: {loc_count} непустых строк.")
 
-        if not inject_module_to_src(mod_path):
+        # передаем args.helper вторым аргументом
+        if not inject_module_to_src(mod_path, args.helper):
             print("  ⚠️ .java файлы не найдены, пропуск.")
             continue
 
