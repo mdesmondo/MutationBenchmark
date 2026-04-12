@@ -1,0 +1,36 @@
+--- Статистическая значимость (Mann-Whitney U Test) для времени ---
+
+Модуль: PASCAL                    | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: FIND_IN_SORTED            | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: LIS                       | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: POSSIBLE_CHANGE           | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: LCS_LENGTH                | P-value: 0.0001 | Результат: ЗНАЧИМО
+Модуль: KNAPSACK                  | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_1_bst              | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: FIND_FIRST_IN_SORTED      | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: POWERSET                  | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_6_LRUCache         | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_4_djikstra         | P-value: 0.0236 | Результат: ЗНАЧИМО
+Модуль: GCD                       | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: KHEAPSORT                 | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: SQRT                      | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: LONGEST_COMMON_SUBSEQUENCE | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: FLATTEN                   | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: TO_BASE                   | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_5_pricingengine    | P-value: 0.0369 | Результат: ЗНАЧИМО
+Модуль: SIEVE                     | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: LEVENSHTEIN               | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: BITCOUNT                  | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: BUCKETSORT                | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: IS_VALID_PARENTHESIZATION | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: SHUNTING_YARD             | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: NEXT_PERMUTATION          | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_3_orderstatemachine | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: KTH                       | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: MAX_SUBLIST_SUM           | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_7_rpnevaluator     | P-value: 0.0002 | Результат: ЗНАЧИМО
+Модуль: GET_FACTORS               | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: QUICKSORT                 | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: module_2_jarowinkler      | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: SUBSEQUENCES              | P-value: 0.0000 | Результат: ЗНАЧИМО
+Модуль: MERGESORT                 | P-value: 0.0000 | Результат: ЗНАЧИМО

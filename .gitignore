@@ -1,0 +1,32 @@
+# Java & Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+preprocessing.ser
+covMap.csv
+testMap.csv
+summary.csv
+mutants.log
+major.log
+suppression.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Python & Analytics
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Reports
+docs/pit-reports/
+docs/major-results/
+
+.PVS-Studio/

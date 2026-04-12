@@ -1,0 +1,29 @@
+<project name="MajorMutationAnalysis" default="run-mutations">
+    <property environment="env"/>
+
+    <target name="run-mutations">
+        <junit printsummary="true"
+               fork="no"
+               mutationAnalysis="true"
+               showoutput="true"
+               haltonfailure="false"
+               summaryFile="summary.csv"
+               mutantDetailsFile="details.csv">
+
+            <classpath>
+                <pathelement location="${basedir}/target/classes"/>
+                <pathelement location="${basedir}/target/test-classes"/>
+                <fileset dir="${basedir}/target/lib">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+
+            <batchtest>
+                <fileset dir="${basedir}/target/test-classes">
+                    <include name="**/*Test.class"/>
+                    <include name="**/*TEST.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+</project>
