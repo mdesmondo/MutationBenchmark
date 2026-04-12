@@ -27,6 +27,9 @@ echo -e "${BLUE}⏳ Обновляю pip и устанавливаю библи�
 ./venv/bin/python3 -m pip install --upgrade pip
 ./venv/bin/python3 -m pip install -r requirements.txt
 
+# 4. Создание директорий
+mkdir -p src/main/java src/test/java
+
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✅ Все библиотеки успешно установлены!${NC}"
 else
